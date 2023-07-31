@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a1 = [2, 4, 6, 8, 10, 13];
+      let a2 = a1.filter((n) => {
+        if (n % 2 == 0) return true;
+        else if (n < 50) return true;
+        else return false;
+      });
+      console.log(a2);
+    </script>
+  </body>
+</html>

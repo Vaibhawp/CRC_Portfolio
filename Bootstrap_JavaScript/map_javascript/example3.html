@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let m = new Map();
+      m.set("name", "gopal");
+      m.set("address", "Ghaziabad");
+      m.set("id", 123);
+      for (const i of m) {
+        console.log(i[0]);
+      }
+      for (const i of m.keys()) {
+        console.log(i);
+      }
+      for (const i of m.values()) {
+        console.log(i);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+td.same {
+  text-align: left;
+  color: navy;
+}
+td.root {
+  text-align: right;
+  color: navy;
+}
+td,
+tr {
+  text-align: center;
+  font-size: 18px, solid;
+}
+p {
+  text-align: right;
+  vertical-align: top;
+}
+
+.abes {
+  text-align: left;
+}
+.cse {
+  font-size: 20px;
+}
+.co {
+  font-size: 20px, solid;
+  text-align: left;
+}
+.ho {
+  font-size: 20px, solid;
+  text-align: right;
+}
+td.make {
+  color: orangered;
+  font-size: larger;
+  font-size: 50px;
+  font-family: sans-serif;
+}
+.not {
+  text-align: right;
+}
+.ss {
+  font-size: 25px;
+}
+table {
+  height: 10px;
+  width: 100%;
+}

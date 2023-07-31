@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function myFunction() {
+        alert("hello");
+        let name = document.getElementById("name").value;
+        let y = document.getElementById("h2");
+        document.getElementById("h2").innerHTML = y + " " + name;
+      }
+      function exprn() {
+        let exp = document.getElementById("expression").value;
+        const a = eval(exp);
+        document.getElementById("h1").innerHTML = "Answer=" + " " + a;
+      }
+    </script>
+  </head>
+  <body>
+    <h2 id="h2">Welcome</h2>
+    <label for="expression">expression</label>
+    <input type="text" id="expression" />
+    <button onclick="exprn()">Solve</button>
+    <h2 id="h1"></h2>
+  </body>
+</html>

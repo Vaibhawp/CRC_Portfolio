@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let sports = ["cricket", "volleyball", "Soccer", "football"];
+      document.write("<b>Before Sorting:</b><br>");
+      for (let sp of sports) {
+        document.write(`${sp}<br>`);
+      }
+      document.write("<br>");
+
+      sports.sort();
+
+      document.write("<br>");
+      document.write("<b>After Sorting:</b><br>");
+      for (let sp of sports) {
+        document.write(`${sp}<br>`);
+      }
+    </script>
+  </body>
+</html>

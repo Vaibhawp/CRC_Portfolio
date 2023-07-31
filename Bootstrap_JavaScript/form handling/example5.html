@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Validation Example</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form id="myForm">
+        <div class="form-group">
+          <label>Select a number:</label><br />
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="1">1</label>
+            <input
+              class="form-check-input"
+              type="radio"
+              name="number"
+              value="1"
+              required
+            />
+            <label id="1"></label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="2">2</label>
+            <input
+              class="form-check-input"
+              type="radio"
+              name="number"
+              value="2"
+              required
+            />
+            <label id="2"></label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="3">3</label>
+            <input
+              class="form-check-input"
+              type="radio"
+              name="number"
+              value="3"
+              required
+            />
+            <label id="3"></label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label" for="4">4 table </label>
+            <input
+              class="form-check-input"
+              type="radio"
+              name="number"
+              value="4"
+              required
+            />
+            <label id="4"></label>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="abc()">
+          Press key
+        </button>
+      </form>
+    </div>
+
+    <script>
+      function abc() {
+        var x = document.getElementsByName("number");
+        for (let val of x) {
+          const t1 = document.createElement("div");
+          for (i = 1; i <= 10; i++) {
+            let qu = document.createElement("br");
+            let wu = document.createTextNode(val.value * i);
+            qu.append(t1);
+            t1.append(wu);
+          }
+          document.getElementById("name").appendChild(t1);
+        }
+      }
+    </script>
+  </body>
+</html>

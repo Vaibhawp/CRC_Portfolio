@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <!-- grouping the radio button -->
+      <div class="container"></div>
+      <form class="form-control" onsubmit="return add(this)">
+        <input name="gender" id="M" type="radio" value="Male" checked /><span
+          >M</span
+        >
+        <input name="gender" type="radio" id="F" value="female" /><span>F</span>
+        <select id="branch" class="form-select">
+          <option selected>Open this select menu</option>
+          <option value="CSE">CSE</option>
+          <option value="AI">AI</option>
+          <option value="CSDS">CSDS</option>
+        </select>
+        <input type="submit" />
+      </form>
+    </div>
+    <script>
+      // use required always for maintaining the form redundancy
+      function add(form) {
+        console.log(form[1].value);
+        console.log(form.M.vaue);
+        console.log(form.gender);
+        let profile = new Map();
+        let gen;
+        for (let v of form.gender) if (v.checked) gen = v.value;
+        profile.set("gender", gen);
+        console.log(profile);
+
+        console.log(gen);
+        let i = form.branch.selectedIndex;
+        let br = form.branch.options[1].value;
+        profile.set("branch", br);
+        console.log(profile);
+        return false;
+      }
+    </script>
+  </body>
+</html>

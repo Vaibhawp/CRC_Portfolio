@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let m = new Map();
+      m.set("name", "gopal");
+      m.forEach((k, v) => {
+        console.log(v);
+        console.log(k);
+        console.log(`${v + ":" + k}`);
+      });
+      m.set("address", "Ghaziabad");
+      m.forEach((k, v) => {
+        console.log(v);
+        console.log(k);
+        console.log(`${v + ":" + k}`);
+      });
+      m.set("id", 123);
+      m.forEach((k, v) => {
+        console.log(k);
+        console.log(v);
+      });
+      m.forEach((k, v) => {
+        console.log(v);
+        console.log(k);
+        console.log(`${v + ":" + k}`);
+      });
+      //   to iterate over key and value k,v we can also take x,y or any thing
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome Page</title>
+    <script>
+      function CRC() {
+        let abc = confirm("Ready for the output ");
+        // alert("Thank You");
+        var name = document.getElementById("t1").value;
+        var welcomeMessage = "Welcome " + name;
+        document.getElementById("welcomeText").textContent = welcomeMessage;
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="welcomeText">Welcome</h1>
+    <label for="t1">Name:</label>
+    <input type="text" id="t1" />
+
+    <button onclick="CRC()">Click Me</button>
+
+    <div></div>
+  </body>
+</html>

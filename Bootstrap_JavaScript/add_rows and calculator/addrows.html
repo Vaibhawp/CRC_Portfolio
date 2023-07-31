@@ -1,0 +1,113 @@
+<!-- write a html and bootstrapcode using java script which have the following things
+1.the first container has two rows such that the first row has four column
+having s.no ,name field and year. 2. the second container has a button that adds
+new rows in first container -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Rows</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Custom CSS -->
+    <style>
+      .container {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body style="background-color:darkgoldenrod;">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><h2 >CRC Training</h2></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/CRC TRAINING WEBSITE/index.html" ><h2>Home</h2></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><h2>Contact us</h2></a>
+              </li>
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><h2>Register</h2></a>
+                </li>
+            </ul>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Register</a></li>
+                  <li><a class="dropdown-item" href="#">Details</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+   <div class="container mt-3"> <h2 class="text-center bg-success">Achievements</h2></div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <strong>S.No</strong>
+        </div>
+        <div class="col">
+          <strong>Achievement</strong>
+        </div>
+        <div class="col">
+          <strong>Year</strong>
+        </div>
+        <div class="col">
+          <strong>field</strong>
+        </div>
+      </div>
+      <div id="dynamic-rows">
+        <!-- Dynamic rows will be added here -->
+      </div>
+    </div>
+
+    <div class="container mt-7">
+      <button class="btn btn-primary" onclick="addRow()">Add New Row</button>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+      let counter = 0;
+
+      function addRow() {
+        counter++;
+
+        // Create a new row
+        let newRow = document.createElement("div");
+        newRow.className = "row";
+        newRow.innerHTML = `
+        <div class="col">${counter}</div>
+        <div class="col"><input type="text" class="form-control" name="name${counter}"></div>
+        <div class="col"><input type="text" class="form-control" name="year${counter}"></div>
+        <div class="col"><input type="text" class="form-control" name="field${counter}"></div>
+      `;
+
+        // Append the new row to the dynamic-rows container
+        document.getElementById("dynamic-rows").appendChild(newRow);
+      }
+    </script>
+  </body>
+</html>
